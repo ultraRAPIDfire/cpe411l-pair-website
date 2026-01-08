@@ -4,14 +4,6 @@
     --light: #f8fafc;
 }
 
-/* body {
-    font-family: 'Inter', system-ui, sans-serif;
-    margin: 0;
-    background-color: var(--dark);
-    color: var(--light);
-    line-height: 1.6;
-} */
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -370,6 +362,102 @@ footer {
 
 .action-footer {
     margin-top: 2.5rem;
+}
+
+/* PROJECTS PAGE css elements*/
+.project-post {
+    background: rgba(255, 255, 255, 0.05); /* Slight glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header/Title Area */
+.project-header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--primary, #00d4ff); /* Using your primary color */
+}
+
+.post-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background: var(--primary, #00d4ff);
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Image/Output Area */
+.project-output {
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-output img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain; /* Keeps the whole output image visible */
+    display: block;
+}
+
+/* Description Area */
+.project-body {
+    padding: 20px;
+}
+
+.project-desc {
+    line-height: 1.6;
+    color: #ccc;
+    min-height: 4.8em; /* Forces at least 3 lines of height */
+    margin-bottom: 20px;
+}
+
+/* Footer of the Post */
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.tech-stack span {
+    font-size: 0.85rem;
+    color: #888;
+    margin-right: 10px;
+}
+
+.view-btn {
+    text-decoration: none;
+    color: var(--primary, #00d4ff);
+    font-size: 0.9rem;
+    border: 1px solid var(--primary, #00d4ff);
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: var(--primary, #00d4ff);
+    color: #000;
 }
 
 /* Mobile Responsiveness */
