@@ -240,6 +240,40 @@ footer {
     gap: 1.5rem;
 }
 
+.profile-img-wrapper {
+    /* Hard-coding the container size ensures all cards are identical */
+    width: 250px; 
+    height: 250px;
+    margin-bottom: 1.5rem;
+    
+    /* This creates the formal circular look */
+    border-radius: 50%; 
+    border: 2px solid var(--accent-primary);
+    padding: 3px;
+    
+    /* Crucial: This hides any part of the image that is too large */
+    overflow: hidden; 
+    background-color: var(--bg-primary);
+    
+    /* Centers the image inside if it's smaller (rare) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    /* The image fills the 80px container */
+    width: 100%;
+    height: 100%;
+    
+    /* CRITICAL: This crops the image to fit the square without squishing it */
+    object-fit: cover; 
+    
+    /* Matches the wrapper's circle shape */
+    border-radius: 50%; 
+    display: block;
+}
+
 /* Mobile Compatibility */
 @media (max-width: 768px) {
     .split-content-side {
@@ -252,11 +286,11 @@ footer {
     }
 }
 
-/* About page css custom elements */
-.double-split-hero {
+/* ABOUT PAGE css custom elements */
+.double-split-heroabt {
     position: relative;
     width: 100%;
-    min-height: 90vh; /* Adjust based on content height */
+    min-height: 90vh; 
     display: flex;
     justify-content: center;
     align-items: center;
