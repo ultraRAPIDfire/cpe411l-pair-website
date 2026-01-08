@@ -90,9 +90,6 @@ p {
   color: var(--text-secondary);
 }
 
-/* =========================
-   LINKS & BUTTONS
-   ========================= */
 a {
   color: var(--accent-primary);
   text-decoration: none;
@@ -121,9 +118,6 @@ a:hover {
   opacity: 0.9;
 }
 
-/* =========================
-   LAYOUT
-   ========================= */
 .container {
   max-width: 1200px;
   padding: 2rem;
@@ -134,9 +128,6 @@ a:hover {
   margin-bottom: 3rem;
 }
 
-/* =========================
-   CARD STYLES
-   ========================= */
 .card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -161,18 +152,12 @@ a:hover {
   color: var(--text-secondary);
 }
 
-/* =========================
-   CARD GRID
-   ========================= */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 
-/* =========================
-   BADGES / TAGS
-   ========================= */
 .badge {
   display: inline-block;
   padding: 0.25rem 0.6rem;
@@ -182,9 +167,6 @@ a:hover {
   color: var(--accent-primary);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
 footer {
   border-top: 1px solid var(--border-color);
   padding: 2rem;
