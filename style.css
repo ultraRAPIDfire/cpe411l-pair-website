@@ -4,13 +4,13 @@
     --light: #f8fafc;
 }
 
-body {
+/* body {
     font-family: 'Inter', system-ui, sans-serif;
     margin: 0;
     background-color: var(--dark);
     color: var(--light);
     line-height: 1.6;
-}
+} */
 
 nav {
     display: flex;
@@ -250,4 +250,90 @@ footer {
     .about-text h1 {
         font-size: 2.8rem;
     }
+}
+
+/* About page css custom elements */
+.double-split-hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh; /* Adjust based on content height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+}
+
+.split-side {
+    position: absolute;
+    top: 0;
+    width: 40%; /* Controls how far into the center the images reach */
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4; /* Softens images to keep focus on the middle */
+}
+
+.split-left {
+    left: 0;
+    background: url('../Resources/images/collaboration.jpg') center/cover no-repeat;
+    /* Angled inwards towards the center content */
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+
+.split-right {
+    right: 0;
+    background: url('../Resources/images/code-workflow.jpg') center/cover no-repeat;
+    /* Mirroring the left side */
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.center-content {
+    position: relative;
+    z-index: 10;
+    max-width: 850px;
+    padding: 2rem;
+    width: 100%;
+}
+
+.about-glass-card {
+    background: rgba(15, 23, 42, 0.95); /* Using your --dark color with transparency */
+    backdrop-filter: blur(20px);
+    padding: 4rem 3rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.about-glass-card h1 span {
+    color: var(--primary); /* Using your #6366f1 */
+}
+
+.mission-text p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-top: 1.5rem;
+}
+
+.citation-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.action-footer {
+    margin-top: 2.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .split-side { width: 25%; } /* More space for text on tablets */
+}
+
+@media (max-width: 768px) {
+    .split-side { display: none; } /* Remove background images for readability on mobile */
+    .about-glass-card { padding: 2rem 1.5rem; }
+    .about-glass-card h1 { font-size: 2.2rem; }
 }
